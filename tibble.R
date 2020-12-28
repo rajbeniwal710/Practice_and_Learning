@@ -1,0 +1,16 @@
+library(tidyverse)
+data=as_tibble(iris)
+data
+data %>% pull(Species)
+data %>% select(1:3)
+data %>% select(1, 3)
+data %>% select(Sepal.Length,Petal.Length)
+data %>% select(Sepal.Length:Petal.Length)
+data %>% select(starts_with("petal"))
+data %>% select(ends_with("width"))
+data %>% select(contains("etal"))
+data %>% select(matches(".t."))
+data %>% select(one_of(c("Sepal.Length", "Petal.Length")))
+data %>% select_if(is.numeric)
+data %>% select_if(is.character)
+
